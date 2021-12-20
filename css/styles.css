@@ -145,6 +145,8 @@ body {
 .header-contact-item-icon {
   margin-right: 10px;
   fill: currentColor;
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .header-contact-item .header-contact-link:hover,
@@ -157,6 +159,13 @@ body {
 .footer-address-link:hover,
 .footer-address-link:focus {
   color: var(--accent-color);
+}
+
+.header-nav-link,
+.header-contact-link,
+.footer-contact-link,
+.footer-address-link {
+  transition: color 250ms var(--timing-function);
 }
 
 /* Стилізація кнопок */
@@ -172,6 +181,8 @@ body {
   color: var(--body-title-color);
   background-color: var(--background-select-color);
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .btn-hero {
@@ -317,12 +328,12 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 70px;
-  padding-top: 27px;
-  padding-bottom: 27px;
   font-size: 14px;
-  text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
   background-color: rgba(47, 48, 58, 0.8);
@@ -391,6 +402,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -402,6 +415,8 @@ body {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .social-link:hover .social-link-svg,
@@ -429,12 +444,16 @@ body {
   height: 100%;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .our-clients-logo {
   width: 106px;
   height: 60px;
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .our-clients-link:hover .our-clients-logo,
@@ -455,7 +474,9 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--backdrop-background-color);
+
   opacity: 1;
+
   transition: opacity 250ms var(--timing-function);
 }
 
@@ -463,15 +484,13 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity 250ms var(--timing-function);
 }
 
-.backdrop-container.is-hidden .backdrop-box {
-  transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 250ms var(--timing-function);
+.backdrop-container.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
-.backdrop-box {
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -481,8 +500,10 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function);
+
+  transition: transform 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
 
 .btn-backdrop-close {
@@ -513,9 +534,10 @@ body {
   width: 11px;
   height: 11px;
   fill: var(--color-black);
+
+  transition: fill 250ms var(--timing-function);
 }
 /* Стилізація footer */
-
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -596,6 +618,8 @@ body {
 
 .works-item-link {
   display: block;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .works-item-link:hover,
