@@ -182,7 +182,8 @@ body {
   background-color: var(--background-select-color);
   cursor: pointer;
 
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .btn-hero {
@@ -198,19 +199,6 @@ body {
 .btn-hero:hover,
 .btn-hero:focus {
   background: #188ce8;
-}
-
-.works-btn {
-  padding: 6px 22px;
-}
-
-.works-btn:active,
-.works-btn:hover,
-.works-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--button-hover-text-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Стилізація Героя */
@@ -607,6 +595,18 @@ body {
 .works-item-nav:not(:last-child) {
   margin-right: 8px;
 }
+.works-btn {
+  padding: 6px 22px;
+}
+
+.works-btn:active,
+.works-btn:hover,
+.works-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--button-hover-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 .works-item-list {
   display: flex;
@@ -617,8 +617,6 @@ body {
 
 .works-item-link {
   display: block;
-
-  transition: box-shadow 250ms var(--timing-function);
 }
 
 .works-item-link:hover,
@@ -651,7 +649,8 @@ body {
   transition: transform 250ms var(--timing-function);
 }
 
-.works-item-link:hover .works-overlay {
+.works-item-link:hover .works-overlay,
+.works-item-link:focus .works-overlay {
   transform: translate(0, -100%);
 }
 
